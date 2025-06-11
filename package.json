@@ -1,0 +1,25 @@
+{
+  "name": "imac",
+  "version": "1.0.0",
+  "description": "imac website replica",
+  "default": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "staticFiles": {
+    "staticPath": "./static/g3",
+    "watcherGlob": "**"
+  },
+  "author": "mhdv",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.15.2",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel-reporter-static-files-copy": "^1.5.3"
+  },
+  "dependencies": {
+    "@parcel/config-default": "^2.15.2"
+  }
+}
