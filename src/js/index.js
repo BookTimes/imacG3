@@ -27,7 +27,7 @@ class App {
       const img = new Image();
 
       // img.src = i < 10 ? `./000${i}.png` : `./00${i}.png`; //for parcel
-      img.src = i < 10 ? `/static/g3/000${i}.png` : `/static/g3/00${i}.png`;
+      img.src = i < 10 ? `./static/g3/000${i}.png` : `./static/g3/00${i}.png`;
 
       frames.push(img);
     }
