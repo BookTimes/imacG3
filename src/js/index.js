@@ -13,6 +13,7 @@ class App {
   constructor() {
     this.HeroTextColor();
     this.loadFrames();
+    this.loadWeb();
   }
   HeroTextColor = function () {
     const texts = document.querySelectorAll(".hero-text-tag-effect");
@@ -38,6 +39,19 @@ class App {
       ctx.drawImage(frames[currentFrame], 0, 0);
     };
   };
+
+  loadWeb() {
+    setTimeout(() => {
+      if (!window.location.hash) {
+        window.location.hash = "loadComplete";
+
+        window.location.reload();
+      } else {
+        document.querySelector(".loader-container").remove();
+        document.body.classList.remove("no-scroll");
+      }
+    }, 5000);
+  }
 }
 const app = new App();
 

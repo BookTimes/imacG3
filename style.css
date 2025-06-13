@@ -419,6 +419,64 @@ a {
   color: inherit;
 }
 
+.loader-container {
+  background: #ffffff;
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.loader-img {
+  width: 25vw;
+  object-fit: contain;
+}
+
+.loader-text {
+  font-family: sf-pro;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.loader-bar-container {
+  background: #a0a0a0;
+  width: 25vw;
+  height: 5px;
+  border-radius: 2.5px;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.604);
+  z-index: 1;
+  overflow-y: hidden;
+}
+
+.loader-bar {
+  background: #7097a4;
+  width: 0%;
+  object-fit: cover;
+  height: 56px;
+  animation: load 5s forwards;
+}
+
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .colorful-header-title {
     font-size: 2rem;
